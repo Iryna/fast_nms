@@ -1,3 +1,5 @@
+import numpy as np
+
 from fast_nm_suppression import FNMSuppression
 
 boxes = np.array([(12, 84, 140, 212), (24, 84, 152, 212),
