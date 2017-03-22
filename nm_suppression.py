@@ -3,7 +3,7 @@
 import numpy as np
 
 
-class FNMSuppression(object):
+class NMSuppression(object):
     def __init__(self, bbs, overlapThreshold = 0.45):
         self.bbs = bbs
         self.overlapThreshold = overlapThreshold
