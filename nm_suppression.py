@@ -110,7 +110,7 @@ class NMSuppression(object):
             idxs = np.delete(idxs, suppress)
 
         # return only the bounding boxes that were picked
-        return bbs[picked]
+        return self.bbs[picked]
 
     def fast_suppress(self):
         self.check_empty()
@@ -143,4 +143,4 @@ class NMSuppression(object):
             # return only the bounding boxes that were picked using the
             # integer data type
 
-        return bbs[picked].astype("int")
+        return self.bbs[picked].astype("int")
