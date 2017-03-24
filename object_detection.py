@@ -1,4 +1,16 @@
 #taken from: http://www.pyimagesearch.com/2014/11/17/non-maximum-suppression-object-detection-python
+"""
+Project parts (taken from the tutorial above):
+1.    Sampling positive images
+2.    Sampling negative images
+3.    Training a Linear SVM
+4.    Performing hard-negative mining
+5.    Re-training your Linear SVM using the hard-negative samples
+6.    Evaluating your classifier on your test dataset, utilizing non-maximum 
+        suppression to ignore redundant, overlapping bounding boxes
+     
+The sample images in this project are taken from the web (labeled as: no licensing needed for non-comertial use).
+"""
 
 from nm_suppression import NMSuppression
 import numpy as np
