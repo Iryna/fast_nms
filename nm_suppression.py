@@ -8,14 +8,14 @@ class NMSuppression(object):
         self.bbs = bbs
         self.overlapThreshold = overlapThreshold
 
-    def check_empty(self):
+    def _check_empty(self):
         # return an empty list, if there are no boxes
         if len(self.bbs) == 0:
             return []
         else:
             return self.bbs
 
-    def check_dtype(self):
+    def _check_dtype(self):
         # if the bounding boxes integers, convert them to floats (divisions)
         if self.bbs.dtype.kind == "i":
             self.bbs = self.bbs.astype("float")
@@ -54,8 +54,8 @@ class NMSuppression(object):
         return overlap
 
     def slow_suppress(self):
-        self.check_empty()
-        self.check_dtype()
+        self._check_empty()
+        self._check_dtype()
 
         # initialize the list of picked indexes
         picked = []
@@ -113,8 +113,8 @@ class NMSuppression(object):
         return self.bbs[picked]
 
     def fast_suppress(self):
-        self.check_empty()
-        self.check_dtype()
+        self._check_empty()
+        self._check_dtype()
 
         # initialize the list of picked indexes
         picked = []
